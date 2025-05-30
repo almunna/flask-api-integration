@@ -13,6 +13,6 @@ def create_app():
     app.register_blueprint(notion_bp, url_prefix='/api/notion') 
     app.register_blueprint(teams_bp, url_prefix='/api/teams') 
     app.register_blueprint(asana_bp, url_prefix='/api/asana') 
-    app.register_blueprint(clickup_bp, url_prefix='/api/checkup')
+    app.register_blueprint(clickup_bp, url_prefix='/api/clickup')
     
     return app
