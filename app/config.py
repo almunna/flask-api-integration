@@ -23,3 +23,6 @@ class Config:
     #Asana
     ASANA_PAT = os.getenv("ASANA_PAT")
     ASANA_BASE_URL = "https://app.asana.com/api/1.0"
+    #checkup
+    CLICKUP_API_TOKEN = os.getenv("CLICKUP_API_TOKEN")
+    CLICKUP_API_BASE_URL = "https://api.clickup.com/api/v2"
