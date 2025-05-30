@@ -8,7 +8,6 @@ import re
 from app.slack.slack_service import send_message_to_slack, update_slack_message, delete_slack_message, schedule_slack_message,list_slack_channels, get_thread_replies, join_channel, create_reminder, list_reminders, complete_reminder,list_all_users, get_user_info, get_user_profile, upload_file_to_slack, list_files_from_slack, list_custom_emojis, add_reaction_to_message, remove_reaction_from_message, get_reactions, leave_channel, get_channel_members, get_channel_info, get_user_presence, set_user_presence, update_user_profile, get_team_info, get_team_profile_fields, get_user_conversations, pin_message, unpin_message, list_pinned_messages, add_bookmark, list_bookmarks, remove_bookmark, list_direct_messages, open_dm, get_dm_conversation_history, revoke_slack_token
 
 
-
 slack_bp = Blueprint('slack', __name__)
 
 #chat.postMessage
