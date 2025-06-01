@@ -6,6 +6,8 @@ from app.asana.asana_routes import asana_bp
 from app.clickup.clickup_routes import clickup_bp 
 from app.jira.jira_routes import jira_bp
 from app.config import Config
+from app.monday.monday_routes import monday_bp
+from app.salesforce.salesforce_routes import salesforce_bp
 
 def create_app():
     app = Flask(__name__)
@@ -18,5 +20,9 @@ def create_app():
     app.register_blueprint(asana_bp, url_prefix='/api/asana') 
     app.register_blueprint(clickup_bp, url_prefix='/api/clickup')
     app.register_blueprint(jira_bp, url_prefix='/api/jira') 
-    
+    app.register_blueprint(monday_bp, url_prefix='/api/monday')
+    app.register_blueprint(salesforce_bp, url_prefix='/api/salesforce')
+
+
+
     return app

@@ -33,4 +33,14 @@ class Config:
     JIRA_API_TOKEN = os.getenv("JIRA_API_TOKEN")
     JIRA_BASE_URL = os.getenv("JIRA_BASE_URL")
 
-print("Loaded JIRA_EMAIL:", os.getenv("JIRA_EMAIL"))
+    #monday
+    MONDAY_API_KEY = os.getenv("MONDAY_API_KEY")
+    MONDAY_API_URL = "https://api.monday.com/v2"
+
+    # Salesforce
+    SALESFORCE_CLIENT_ID = os.getenv("SALESFORCE_CLIENT_ID")
+    SALESFORCE_CLIENT_SECRET = os.getenv("SALESFORCE_CLIENT_SECRET")
+    SALESFORCE_USERNAME = os.getenv("SALESFORCE_USERNAME")
+    SALESFORCE_PASSWORD = os.getenv("SALESFORCE_PASSWORD")
+    ACCESS_TOKEN = os.getenv("SALESFORCE_SECURITY_TOKEN")
+    SALESFORCE_INSTANCE_URL = os.getenv("SALESFORCE_INSTANCE_URL")
