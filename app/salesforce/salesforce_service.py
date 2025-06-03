@@ -1299,7 +1299,6 @@ def get_dashboards():
         }
 
 #get_dashboard_data
-
 def get_dashboard_data(dashboard_id):
     try:
         headers = HEADERS

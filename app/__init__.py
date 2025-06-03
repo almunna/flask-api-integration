@@ -8,6 +8,8 @@ from app.jira.jira_routes import jira_bp
 from app.config import Config
 from app.monday.monday_routes import monday_bp
 from app.salesforce.salesforce_routes import salesforce_bp
+from app.linkedin.linkedin_routes import linkedin_bp
+from app.linkedin_sales.linkedin_routes import linkedin_sales_bp
 
 def create_app():
     app = Flask(__name__)
@@ -22,7 +24,8 @@ def create_app():
     app.register_blueprint(jira_bp, url_prefix='/api/jira') 
     app.register_blueprint(monday_bp, url_prefix='/api/monday')
     app.register_blueprint(salesforce_bp, url_prefix='/api/salesforce')
-
+    app.register_blueprint(linkedin_bp, url_prefix='/api/linkedin')
+    app.register_blueprint(linkedin_sales_bp, url_prefix='/api/linkedin-sales')
 
 
     return app
