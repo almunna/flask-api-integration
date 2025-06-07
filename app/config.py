@@ -48,3 +48,31 @@ class Config:
     #Linkedin
     LINKEDIN_API_BASE_URL = "https://api.linkedin.com/v2"
     LINKEDIN_ACCESS_TOKEN = os.getenv("LINKEDIN_ACCESS_TOKEN")
+
+    #DISCORD
+    
+    DISCORD_CLIENT_ID = os.getenv("DISCORD_CLIENT_ID")
+    DISCORD_CLIENT_SECRET = os.getenv("DISCORD_CLIENT_SECRET")
+    DISCORD_REDIRECT_URI = os.getenv("DISCORD_REDIRECT_URI", "http://localhost:5000/api/discord/callback")
+    DISCORD_API_BASE_URL = "https://discord.com/api"
+    DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+
+    #Instragram
+    INSTAGRAM_USER_ID = os.getenv("INSTAGRAM_USER_ID")  # IG Business account ID
+    INSTAGRAM_ACCESS_TOKEN = os.getenv("INSTAGRAM_ACCESS_TOKEN")
+    INSTAGRAM_GRAPH_API_VERSION = os.getenv("INSTAGRAM_GRAPH_API_VERSION", "v23.0")
+    INSTAGRAM_API_BASE_URL = f"https://graph.facebook.com/{INSTAGRAM_GRAPH_API_VERSION}"
+
+    #Facebook
+    FACEBOOK_ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
+    FACEBOOK_GRAPH_API_VERSION = os.getenv("FACEBOOK_GRAPH_API_VERSION", "v18.0")
+    FACEBOOK_GRAPH_API_BASE_URL = f"https://graph.facebook.com/{FACEBOOK_GRAPH_API_VERSION}"
+
+    #Whatsapp
+    WHATSAPP_ACCESS_TOKEN = os.getenv("WHATSAPP_ACCESS_TOKEN")
+    WHATSAPP_PHONE_NUMBER_ID = os.getenv("WHATSAPP_PHONE_NUMBER_ID")
+    WHATSAPP_API_VERSION = os.getenv("WHATSAPP_API_VERSION", "v19.0")
+    WHATSAPP_BASE_URL = f"https://graph.facebook.com/{WHATSAPP_API_VERSION}"
+    WHATSAPP_MESSAGES_URL = f"{WHATSAPP_BASE_URL}/{WHATSAPP_PHONE_NUMBER_ID}/messages"
+    WHATSAPP_MEDIA_URL = f"{WHATSAPP_BASE_URL}/{WHATSAPP_PHONE_NUMBER_ID}/media"
+    FACEBOOK_APP_ID = os.getenv("FACEBOOK_APP_ID")

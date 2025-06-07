@@ -13,7 +13,6 @@ def get_sales_profile(instance_id: str, partner: str, record_id: str) -> dict:
             "error": 400,
             "message": "Missing required input: instance_id, partner, or record_id"
         }
-
     # Construct URL
     url = f"{base_url}/salesNavigatorProfileAssociations/(instanceId:{instance_id},partner:{partner},recordId:{record_id})"
 
@@ -21,7 +20,6 @@ def get_sales_profile(instance_id: str, partner: str, record_id: str) -> dict:
         "Authorization": f"Bearer {access_token}",
         "X-RestLi-Protocol-Version": "2.0.0"
     }
-
     try:
         response = requests.get(url, headers=headers)
         if response.ok:
@@ -48,7 +46,6 @@ def get_sales_profile(instance_id: str, partner: str, record_id: str) -> dict:
             "error": "network_error",
             "message": str(e)
         }
-
 def mock_get_sales_profile(instance_id: str, partner: str, record_id: str) -> dict:
     return {
         "member": f"urn:li:person:mock_{record_id}",
